@@ -19,10 +19,11 @@
 		<mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
 		<velocity.version>2.3</velocity.version>
 		<knife4j.version>3.0.3</knife4j.version>
-		<redis.version>2.6.1</redis.version>
+		<redis.version>2.7.3</redis.version>
 		<hutool.version>5.8.6</hutool.version>
 		<jjwt.version>0.9.1</jjwt.version>
 		<lombok.version>1.18.24</lombok.version>
+		<springdoc.version>1.6.11</springdoc.version>
 	</properties>
 	<dependencies>
 
@@ -52,31 +53,39 @@
 		</dependency>
 
 
-<!--		&lt;!&ndash;    Mysql驱动     &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>mysql</groupId>-->
-<!--			<artifactId>mysql-connector-java</artifactId>-->
-<!--		</dependency>-->
+		<!--    Mysql驱动     -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 
-<!--		&lt;!&ndash;    mybatis-plus    &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.baomidou</groupId>-->
-<!--			<artifactId>mybatis-plus-boot-starter</artifactId>-->
-<!--			<version>${mybatis-plus.version}</version>-->
-<!--		</dependency>-->
+		<!--    redis     -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>${redis.version}</version>
+		</dependency>
 
-<!--		&lt;!&ndash;   代码生成器    &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>com.baomidou</groupId>-->
-<!--			<artifactId>mybatis-plus-generator</artifactId>-->
-<!--			<version>${mybatis-plus-generator.version}</version>-->
-<!--		</dependency>-->
-<!--		&lt;!&ndash;   代码生成器的引擎 velocity  &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.apache.velocity</groupId>-->
-<!--			<artifactId>velocity-engine-core</artifactId>-->
-<!--			<version>${velocity.version}</version>-->
-<!--		</dependency>-->
+
+		<!--    mybatis-plus    -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-boot-starter</artifactId>
+			<version>${mybatis-plus.version}</version>
+		</dependency>
+
+		<!--   代码生成器    -->
+		<dependency>
+			<groupId>com.baomidou</groupId>
+			<artifactId>mybatis-plus-generator</artifactId>
+			<version>${mybatis-plus-generator.version}</version>
+		</dependency>
+		<!--   代码生成器的引擎 velocity  -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-engine-core</artifactId>
+			<version>${velocity.version}</version>
+		</dependency>
 
 		<!-- simbot Spring Boot Starter -->
 		<dependency>
@@ -107,8 +116,24 @@
 			<version>${hutool.version}</version>
 		</dependency>
 
+		<!-- springdoc-openapi -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
+		</dependency>
+
+		<!--Knife4j的官方ui包-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-springdoc-ui</artifactId>
+			<version>${knife4j.version}</version>
+		</dependency>
+
+
 	</dependencies>
 
+	<!-- SpringBoot版本声明 -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
