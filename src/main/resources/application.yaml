@@ -1,1 +1,35 @@
+server:
+  #  端口号
+  port: 9000
 
+spring:
+  # 应用名称
+  application:
+    name: robot
+    # 数据库配置
+#    datasource:
+#      username: root
+#      password: password
+#      url: jdbc:mysql://localhost:3306/blog?userUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=UTC
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+    # redis的配置
+#    redis:
+#      host: 127.0.0.1
+#      port: 6379
+#      database: 5
+#      timeout: 5000
+
+# mybatis-plus配置
+#mybatis-plus:
+#  mapper-locations: classpath*:/com/yww/robot/mapper/xml/*.xml
+
+# Knife4j配置
+#knife4j:
+#  enable: true
+#  setting:
+#    swaggerModelName: 实体类列表
+#    enableFooter: false
+
+# 机器人配置
+simbot:
+  bot-configuration-resources: classpath:pcrbots/*.bot

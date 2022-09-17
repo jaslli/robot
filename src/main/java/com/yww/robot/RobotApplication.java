@@ -1,9 +1,16 @@
 package com.yww.robot;
 
-import love.forte.simboot.autoconfigure.EnableSimbot;
+import love.forte.simboot.spring.autoconfigure.EnableSimbot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ *<p>
+ *      主启动类
+ *</p>
+ * @ClassName RobotApplication
+ * @Author yww
+ */
 @EnableSimbot
 @SpringBootApplication
 public class RobotApplication {

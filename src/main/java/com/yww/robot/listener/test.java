@@ -1,8 +1,6 @@
 package com.yww.robot.listener;
 
-import love.forte.simboot.annotation.Filter;
 import love.forte.simboot.annotation.Listener;
-import love.forte.simboot.filter.MatchType;
 import love.forte.simbot.definition.Friend;
 import love.forte.simbot.event.EventResult;
 import love.forte.simbot.event.FriendMessageEvent;
@@ -20,8 +18,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class test {
 
-    @Listener()
-    @Filter(value = "hi", matchType = MatchType.TEXT_EQUALS)
+    @Listener
     public EventResult reply(FriendMessageEvent friendMessageEvent) {
         String reply = ("hello world!");
         // 如果有，发送消息，并阻止后续事件的执行。

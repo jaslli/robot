@@ -34,4 +34,4 @@ build/
 
 ### 机器人配置 ###
 /cache/
-/src/main/resources/simbot-bots/
+/src/main/resources/pcrbots/
