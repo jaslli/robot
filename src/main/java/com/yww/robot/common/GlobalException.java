@@ -1,9 +1,8 @@
-package com.yww.robot.utils;
+package com.yww.robot.common;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import static com.yww.robot.utils.ResultCode.FAILED;
+import java.io.Serial;
 
 /**
  * <p>
@@ -15,13 +14,15 @@ import static com.yww.robot.utils.ResultCode.FAILED;
  * @Date 2022/9/17 23:23
  */
 @Getter
-@AllArgsConstructor
 public class GlobalException extends RuntimeException {
+
+    @Serial
+    private static final long serialVersionUID = -1574716826948451793L;
 
     /**
      * 错误码
      */
-    private Integer code = FAILED.getStatus();
+    private final Integer code;
 
     /**
      * 错误信息
@@ -29,12 +30,13 @@ public class GlobalException extends RuntimeException {
     private final String message;
 
     public GlobalException(String message) {
+        this.code = 500;
         this.message = message;
     }
 
-    public GlobalException(ResultCode resultCode) {
-        this.code = resultCode.getStatus();
-        this.message = resultCode.getMessage();
+    public GlobalException(Integer code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
 }

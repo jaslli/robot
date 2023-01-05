@@ -8,8 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *<p>
  *      主启动类
  *</p>
- * @ClassName RobotApplication
- * @Author yww
+ * @author yww
  */
 @EnableSimbot
 @SpringBootApplication

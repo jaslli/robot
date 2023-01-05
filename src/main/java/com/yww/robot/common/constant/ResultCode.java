@@ -1,4 +1,4 @@
-package com.yww.robot.utils;
+package com.yww.robot.common.constant;
 
 /**
  * <p>

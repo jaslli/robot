@@ -22,7 +22,3 @@ spring:
 # mybatis-plus配置
 mybatis-plus:
   mapper-locations: classpath*:/com/yww/robot/mapper/xml/*.xml
-
-# 机器人配置
-simbot:
-  bot-configuration-resources: classpath:pcrbots/*.bot

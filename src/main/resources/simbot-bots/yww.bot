@@ -1,0 +1,17 @@
+{
+  "component": "simbot.mirai",
+  "code": 2996832118,
+  "passwordInfo": {
+    "type": "text",
+    "text": "密码"
+  },
+  "config": {
+    "protocol": "ANDROID_PHONE",
+    "deviceInfo": {
+      "type": "auto"
+    },
+    "recallMessageCacheStrategyConfig": {
+      "type": "invalid"
+    }
+  }
+}
